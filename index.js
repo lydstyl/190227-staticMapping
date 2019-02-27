@@ -35,7 +35,7 @@ csv()
             right = right.replace('!!ID!!', line.ID)
         }
         staticMappings += `${left} ${right}\n`
-        testUrls += `<div><a href="${leftTestUrl}${left}">${left} ${right}</a></div>\n`
+        testUrls += `<div><a target="_blank" href="${leftTestUrl}${left}">${left} ${right}</a></div>\n`
     })
     fs.writeFileSync('./staticMappings.txt', staticMappings, 'utf8')
     fs.writeFileSync('./testUrls.html', testUrls, 'utf8')
